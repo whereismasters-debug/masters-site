@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masters — присоединяйся к платформе</title>
+<meta name="description" content="Masters — платформа, объединяющая клиентов с сертифицированными мастерами. Оставь заявку, чтобы присоединиться.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Biryani:wght@300;400;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <h1 class="hero__title" aria-label="Присоединяйся к Masters">
+        <span class="hero__line hero__line--word" aria-hidden="true">ПРИСОЕДИНЯЙСЯ</span>
+        <span class="hero__line hero__line--word" aria-hidden="true">К</span>
+        <span class="hero__line hero__brand" aria-hidden="true">
+          <img class="hero__star" src="logo.svg" alt="" width="135" height="135">
+          <span class="hero__word">ASTERS</span>
+        </span>
+      </h1>
+
+      <div class="hero__cta">
+        <a class="btn btn--hero" href="#contacts">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+        <a class="hero__scroll" href="#about" aria-label="Вниз, к разделу «О нас»">
+          <svg class="hero__arrow" viewBox="0 0 26 15" aria-hidden="true" focusable="false">
+            <path d="M1 1l12 12L25 1" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about__block">
+      <h2 class="section-title about__title">О НАС.</h2>
+      <p class="about__text">
+        <strong>Masters</strong> — это платформа, объединяющая клиентов с
+        сертифицированными мастерами. Мы подбираем талантливых профессионалов,
+        каждый из которых обладает уникальным стилем и опытом, чтобы превратить
+        ваше видение в настоящее искусство.
+      </p>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <h2 class="section-title">КОНТАКТЫ.</h2>
+
+      <form class="form" id="lead-form" novalidate>
+        <div class="form__grid">
+
+          <div class="form__col">
+
+            <div class="field" data-field="first_name">
+              <label class="field__label" for="first_name">Ваше имя<span class="req" aria-hidden="true">*</span></label>
+              <span class="field__box">
+                <input type="text" id="first_name" name="first_name" maxlength="100"
+                       autocomplete="given-name" required aria-required="true"
+                       aria-describedby="err-first_name">
+              </span>
+              <p class="field__error" id="err-first_name" hidden></p>
+            </div>
+
+            <div class="field" data-field="last_name">
+              <label class="field__label" for="last_name">Ваша фамилия<span class="req" aria-hidden="true">*</span></label>
+              <span class="field__box">
+                <input type="text" id="last_name" name="last_name" maxlength="100"
+                       autocomplete="family-name" required aria-required="true"
+                       aria-describedby="err-last_name">
+              </span>
+              <p class="field__error" id="err-last_name" hidden></p>
+            </div>
+
+            <div class="field" data-field="phone">
+              <label class="field__label" for="phone">Телефон<span class="req" aria-hidden="true">*</span></label>
+              <span class="field__box">
+                <input type="tel" id="phone" name="phone" maxlength="30" inputmode="tel"
+                       placeholder="+7 999 123-45-67" autocomplete="tel"
+                       required aria-required="true" aria-describedby="err-phone">
+              </span>
+              <p class="field__error" id="err-phone" hidden></p>
+            </div>
+
+            <div class="field" data-field="telegram">
+              <label class="field__label" for="telegram">Логин телеграм</label>
+              <span class="field__box">
+                <input type="text" id="telegram" name="telegram" maxlength="64"
+                       placeholder="@username" autocomplete="off"
+                       aria-describedby="err-telegram">
+              </span>
+              <p class="field__error" id="err-telegram" hidden></p>
+            </div>
+
+            <div class="field" data-field="address">
+              <label class="field__label" for="address">Адрес<span class="req" aria-hidden="true">*</span></label>
+              <span class="field__box">
+                <input type="text" id="address" name="address" maxlength="300"
+                       autocomplete="street-address" required aria-required="true"
+                       aria-describedby="err-address">
+              </span>
+              <p class="field__error" id="err-address" hidden></p>
+            </div>
+
+            <div class="field choices" data-field="work_format" role="group" aria-labelledby="work-format-label">
+              <span class="field__label" id="work-format-label">Формат работы<span class="req" aria-hidden="true">*</span></span>
+              <label class="choice">
+                <input type="radio" name="work_format" value="studio" aria-describedby="err-work_format">
+                <span class="choice__box"></span>
+                <span class="choice__text">Студия</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="work_format" value="private">
+                <span class="choice__box"></span>
+                <span class="choice__text">Частный мастер</span>
+              </label>
+              <p class="field__error" id="err-work_format" hidden></p>
+            </div>
+
+            <div class="field" data-field="price_from">
+              <label class="field__label" for="price_from">Минимальная стоимость<span class="req" aria-hidden="true">*</span><br>работы (в рублях)</label>
+              <span class="field__box">
+                <input type="text" id="price_from" name="price_from" inputmode="numeric"
+                       maxlength="9" required aria-required="true" aria-describedby="err-price_from">
+              </span>
+              <p class="field__error" id="err-price_from" hidden></p>
+            </div>
+
+          </div>
+
+          <div class="form__col">
+
+            <div class="field" data-field="works_done">
+              <label class="field__label" for="works_done">Завершено работ<span class="req" aria-hidden="true">*</span></label>
+              <span class="field__box">
+                <input type="text" id="works_done" name="works_done" inputmode="numeric"
+                       maxlength="6" required aria-required="true" aria-describedby="err-works_done">
+              </span>
+              <p class="field__error" id="err-works_done" hidden></p>
+            </div>
+
+            <div class="field" data-field="portfolio">
+              <label class="field__label" for="portfolio">Портфолио<span class="req" aria-hidden="true">*</span></label>
+              <textarea id="portfolio" name="portfolio" maxlength="500" rows="4"
+                        class="field__area" placeholder="Ссылка на диск или облако"
+                        required aria-required="true" aria-describedby="err-portfolio"></textarea>
+              <p class="field__error" id="err-portfolio" hidden></p>
+            </div>
+
+            <div class="field techniques" data-field="techniques">
+              <span class="field__label" id="techniques-label">Выберите техники<span class="req" aria-hidden="true">*</span><br>в которых работаете</span>
+
+              <button type="button" class="add" id="add-technique"
+                      aria-expanded="false" aria-controls="techniques-menu"
+                      aria-describedby="err-techniques">
+                <svg class="add__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                  <path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Добавить</span>
+              </button>
+
+              <div class="techniques__menu" id="techniques-menu" role="group"
+                   aria-labelledby="techniques-label" hidden>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Олдскул">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Олдскул</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Неотрадишнл">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Неотрадишнл</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Ньюскул">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Ньюскул</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Японский стиль">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Японский стиль</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Трайбл / племенные тату">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Трайбл / племенные тату</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Лайнворк">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Лайнворк</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Заливка">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Заливка</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Шейдинг">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Шейдинг</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Градиентная техника">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Градиентная техника</span>
+                </label>
+                <label class="choice">
+                  <input type="checkbox" class="technique__option" value="Дотворк">
+                  <span class="choice__box"></span>
+                  <span class="choice__text">Дотворк</span>
+                </label>
+              </div>
+
+              <ul class="techniques__chips" id="techniques-list" aria-live="polite"></ul>
+              <p class="field__error" id="err-techniques" hidden></p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form__submit">
+          <button type="submit" class="btn" id="submit">ОТПРАВИТЬ</button>
+        </div>
+
+        <p class="form__status" id="form-status" role="status" aria-live="polite" hidden></p>
+      </form>
+
+      <div class="thanks" id="thanks" hidden>
+        <h3 class="thanks__title">Заявка отправлена</h3>
+        <p class="thanks__text">Мы посмотрим портфолио и свяжемся с тобой по указанным контактам.</p>
+        <button type="button" class="btn btn--ghost" id="again">ОТПРАВИТЬ ЕЩЁ ОДНУ</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <a class="footer__link" href="#about">О нас</a>
+    <span class="footer__logo" aria-label="Masters">
+      <img class="footer__star" src="logo.svg" alt="" aria-hidden="true" width="135" height="135">
+      <span class="footer__word" aria-hidden="true">ASTERS</span>
+    </span>
+    <address class="footer__contacts">
+      <span class="footer__heading">Контакты</span>
+      <a href="mailto:example@gmail.com">whereismasters@gmail.com</a>
+    </address>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
